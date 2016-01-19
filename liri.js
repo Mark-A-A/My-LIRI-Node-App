@@ -1,20 +1,23 @@
 debugger
 var liriCase = process.argv[2];
-console.log(liriCase);
+//console.log(liriCase);
 
-var liriParameter = process.argv[4];
+var liriParameter = process.argv[3];
+//console.log(liriParameter);
 
 var nodeResult;
+
 //LIRI Functions
+
 var liriMySpotify = require("./liri-Spotify.js");
 var liriMyMovies = require("./liri-OMDB.js");
 var liriMyDoThis = require("./liri-Do-This.js");
-//var liriMyTwitter = require('./liri-Twitter.js');
+var liriMyTwitter = require("./liri-Twitter.js");
 
 
 switch(liriCase) {                                  // Cases
   case "my-tweets":                                 // my-tweets
-    liriMyTwitter.searchTwitter(liriParameter);
+    nodeResult = liriMyTwitter.searchTwitter(liriParameter);
     break;
   case "spotify-this-song":                         // spotify-this-song
     liriMySpotify.searchSpotify(liriParameter);
@@ -28,6 +31,6 @@ switch(liriCase) {                                  // Cases
 
 }
 
-console.log(nodeResult);
+//console.log(nodeResult);
 
 
