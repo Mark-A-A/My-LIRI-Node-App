@@ -23,7 +23,7 @@ switch(liriCase) {                                  // Cases
     liriMySpotify.searchSpotify(liriParameter);
     break;
   case "movie-this":                                // movie-this
-    liriMyMovies;
+    liriMyMovies.moviesOMDB(liriParameter);
     break;
   case "do-what-it-says":                           // do-what-it-says
     liriMyDoThis;
