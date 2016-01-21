@@ -1,11 +1,8 @@
-
-exports.searchTwitter = function() {
-  //console.log("accessed file");
-// debugger
   var Twitter = require('twitter');
  // console.log(Twitter);
  
   var keys = require("./keys.js");
+  
   //console.log(keys);
   //console.log(keys.twitterKeys);
   var client = new Twitter(keys.twitterKeys);
@@ -15,18 +12,23 @@ exports.searchTwitter = function() {
   //console.log(paramsScreenName);
   //console.log(params);
 
+exports.searchTwitter = //function() {
+  //console.log("accessed file");
+// debugger
+
+
 // var result;
 
   client.get('statuses/user_timeline', params, function(error, tweets, response){
     debugger
     if (error){
       console.log(error);
-    }else if (!error) {
+    } else if (!error) {
       
       //console.log(tweets);
       //return tweets;
 
-      for(var i = 0; i < tweets.length; i++) {
+      for (var i = 0; i < tweets.length; i++) {
         console.log(tweets[i].text);
 
         function returnTweets(){
@@ -42,5 +44,5 @@ exports.searchTwitter = function() {
         
   });
 
-} //end of Twitter function export
+//} //end of Twitter function export
 
