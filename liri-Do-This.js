@@ -1,4 +1,29 @@
-module.exports = function() {  
+debugger
+
+var liriMain = require("./liri.js")
+var fs = require("fs");
+
+
+exports.doThis = function() {
   console.log("this works");
-  return "something works"
+  debugger 
+
+
+  fs.readFile('random.txt', "utf8", function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    console.log(data);                                   
+
+    var parameters = data.split(", ");
+    console.log(parameters);
+
+    var parameter1 = parameters[0];
+    var parameter2 = parameters[1];
+
+    liriMain.taskDoThis(parameter1, parameter2);
+
+  });
+
 };
