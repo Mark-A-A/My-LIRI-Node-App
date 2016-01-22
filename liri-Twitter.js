@@ -1,18 +1,18 @@
-  var Twitter = require('twitter');
- // console.log(Twitter);
- 
-  var keys = require("./keys.js");
-  
-  //console.log(keys);
-  //console.log(keys.twitterKeys);
-  var client = new Twitter(keys.twitterKeys);
+var Twitter = require('twitter');
+// console.log(Twitter);
 
-  var paramsScreenName = process.argv[3];
-  var params = {screen_name: paramsScreenName} ;
-  //console.log(paramsScreenName);
-  //console.log(params);
+var keys = require("./keys.js");
+//console.log(keys);
+//console.log(keys.twitterKeys);
 
-exports.searchTwitter = //function() {
+var client = new Twitter(keys.twitterKeys);
+
+var paramsScreenName = process.argv[3];
+var params = {screen_name: paramsScreenName} ;
+//console.log(paramsScreenName);
+//console.log(params);
+
+exports.searchTwitter = function() {
   //console.log("accessed file");
 // debugger
 
@@ -44,5 +44,5 @@ exports.searchTwitter = //function() {
         
   });
 
-//} //end of Twitter function export
+} //end of Twitter function export
 

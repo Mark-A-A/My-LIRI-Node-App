@@ -9,7 +9,7 @@ var resultString = "";
 
 //debugger
 
-exports.searchSpotify = //function() {
+exports.searchSpotify = function() {
   
 
 
@@ -59,5 +59,5 @@ exports.searchSpotify = //function() {
 
   });
 
-//}
+}
 

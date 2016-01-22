@@ -1,22 +1,28 @@
+debugger
+
+var liriMain = require("./liri.js")
+var fs = require("fs");
+
+
 exports.doThis = function() {
-  debugger 
   console.log("this works");
-  
-  var fs = require("fs");
+  debugger 
+
 
   fs.readFile('random.txt', "utf8", function(err, data) {
     if (err) {
       throw err;
     }
-    console.log(data);
 
-    var textSplit = data.split(", ");
-    console.log(textSplit);
+    console.log(data);                                   
 
-    var parameter1 = textSplit[0];
-    var parameter2 = textSplit[1];
+    var parameters = data.split(", ");
+    console.log(parameters);
 
-    
+    var parameter1 = parameters[0];
+    var parameter2 = parameters[1];
+
+    liriMain.taskDoThis(parameter1, parameter2);
 
   });
 
